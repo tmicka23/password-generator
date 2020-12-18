@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Password Generator</title>
+		<link rel="stylesheet" href="style.scss" />
+		<script src="index.js" defer></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a href="/" class="navbar-brand">Password Generator</a>
+			</div>
+		</nav>
+
+		<main class="container my-5">
+			<div class="row">
+				<div class="card offset-sm-2 col-sm-8 offset-md-3 col-md-6">
+					<h3 class="text-center my-3">
+						<strong>
+							generate <br />
+							a secure password
+						</strong>
+					</h3>
+					<div class="card-body">
+						<div class="input-group input-group-lg my-5">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="Pick up your password"
+								aria-label="Pick up your password"
+								aria-describedby="pick-button"
+								readonly
+								id="result-input"
+							/>
+							<button
+								class="btn btn-secondary"
+								type="button"
+								id="pick-button"
+								data-clipboard-target="#result-input"
+								data-clipboard-action="copy"
+								data-bs-toggle="tooltip"
+								data-bs-placement="top"
+								data-bs-animation="true"
+								title="Copy to clipboard"
+							>
+								Copy
+							</button>
+						</div>
+						<hr />
+						<div class="w-100 d-flex justify-content-between align-items-end">
+							<span class="text-muted">4</span>
+							<div>
+								<label for="passwd-length" class="form-label text-muted"
+									>Password length : <span id="passwd-length-display"></span
+								></label>
+								<input type="range" class="form-range" id="passwd-length" min="4" max="36" step="1" />
+							</div>
+							<span class="text-muted">36</span>
+						</div>
+						<hr />
+
+						<div class="form-check form-switch my-3">
+							<input class="form-check-input" type="checkbox" id="withNumbers" />
+							<label class="form-check-label w-100 d-flex justify-content-between" for="withNumbers"
+								><span class="text-muted">Includes Numbers</span>
+								<span class="badge bg-secondary rounded-pill">123</span>
+							</label>
+						</div>
+						<div class="form-check form-switch my-3">
+							<input class="form-check-input" type="checkbox" id="withLowers" />
+							<label class="form-check-label w-100 d-flex justify-content-between" for="withLowers"
+								><span class="text-muted">Includes Lowercases</span>
+								<span class="badge bg-secondary rounded-pill">abc</span>
+							</label>
+						</div>
+						<div class="form-check form-switch my-3">
+							<input class="form-check-input" type="checkbox" id="withUppers" />
+							<label class="form-check-label w-100 d-flex justify-content-between" for="withUppers"
+								><span class="text-muted">Includes Uppercases</span>
+								<span class="badge bg-secondary rounded-pill">ABC</span>
+							</label>
+						</div>
+						<div class="form-check form-switch my-3">
+							<input class="form-check-input" type="checkbox" id="withSymbols" />
+							<label class="form-check-label w-100 d-flex justify-content-between" for="withSymbols"
+								><span class="text-muted">Includes Symols</span>
+								<span class="badge bg-secondary rounded-pill">!@#</span>
+							</label>
+						</div>
+					</div>
+					<button class="btn btn-primary btn-lg btn-block mb-3" id="generate-button">
+						Generate Password
+					</button>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
