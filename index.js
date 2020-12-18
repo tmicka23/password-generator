@@ -1,12 +1,13 @@
 import Clipboard from "clipboard"
 import { Tooltip } from "bootstrap/dist/js/bootstrap"
 
-function generatePassword(length, int = true, down = false, up = false, spec = false) {
+function generatePassword(length = 8, int = true, down = true, up = false, spec = false) {
 	let result = ""
 	const maj = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	const min = "abcdefghijklmnopqrstuvwxyz"
 	const num = "0123456789"
 	const specials = "%$*=#&-_+~^@£€µ!?:/'([)]}|`"
+	length = parseInt(length)
 	let characters = ""
 	if (int) characters += num
 	if (down) characters += min
@@ -20,7 +21,6 @@ function generatePassword(length, int = true, down = false, up = false, spec = f
 }
 
 const result = document.getElementById("result-input")
-const copyButton = document.getElementById("pick-button")
 const displayLength = document.getElementById("passwd-length-display")
 const passwordLength = document.getElementById("passwd-length")
 

@@ -8986,9 +8986,10 @@ var _bootstrap = require("bootstrap/dist/js/bootstrap");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function generatePassword(length) {
+function generatePassword() {
+  var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 8;
   var int = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  var down = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+  var down = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
   var up = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
   var spec = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
   var result = "";
@@ -8996,6 +8997,7 @@ function generatePassword(length) {
   var min = "abcdefghijklmnopqrstuvwxyz";
   var num = "0123456789";
   var specials = "%$*=#&-_+~^@£€µ!?:/'([)]}|`";
+  length = parseInt(length);
   var characters = "";
   if (int) characters += num;
   if (down) characters += min;
@@ -9011,7 +9013,6 @@ function generatePassword(length) {
 }
 
 var result = document.getElementById("result-input");
-var copyButton = document.getElementById("pick-button");
 var displayLength = document.getElementById("passwd-length-display");
 var passwordLength = document.getElementById("passwd-length");
 var withNumbers = document.getElementById("withNumbers");
@@ -9106,7 +9107,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46025" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34045" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
