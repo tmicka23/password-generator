@@ -4,26 +4,32 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Password Generator</title>
 		<link rel="stylesheet" href="style.scss" />
 		<script src="index.js" defer></script>
+		<title>SimplePass | Password Generator</title>
 	</head>
 	<body>
 		<nav class="navbar navbar-dark bg-dark">
 			<div class="container-fluid">
-				<a href="/" class="navbar-brand">Password Generator</a>
+				<a href="/" class="navbar-brand">
+					<img src="assets/lock-white.svg" alt="strong password" class="navbar-logo" /> &nbsp; SimplePass</a
+				>
 			</div>
 		</nav>
 
 		<main class="container my-5">
 			<div class="row">
 				<div class="card offset-sm-2 col-sm-8 offset-md-3 col-md-6">
-					<h3 class="text-center my-3">
+					<h1 class="text-center my-3">
 						<strong>
-							Generate <br />
+							Easy generate <br />
 							a secure password
+							<br />
+							with SimplePass
+							<br />
+							<img src="assets/lock.svg" alt="SimplePass" class="hero-logo" />
 						</strong>
-					</h3>
+					</h1>
 					<div class="card-body">
 						<div class="input-group input-group-lg my-5">
 							<input
@@ -36,7 +42,7 @@
 								id="result-input"
 							/>
 							<button
-								class="btn btn-secondary"
+								class="btn btn-secondary text-align-center"
 								type="button"
 								id="pick-button"
 								data-clipboard-target="#result-input"
@@ -46,7 +52,7 @@
 								data-bs-animation="true"
 								title="Copy to clipboard"
 							>
-								Copy
+								<img src="assets/clipboard.svg" alt="copy password" class="btn-logo" />
 							</button>
 						</div>
 						<hr />
@@ -100,7 +106,8 @@
 						</div>
 					</div>
 					<button class="btn btn-primary btn-lg btn-block mb-3" id="generate-button">
-						Generate Password
+						Generate Password &nbsp;
+						<img src="assets/generate.svg" alt="generate password" class="btn-logo" />
 					</button>
 				</div>
 			</div>

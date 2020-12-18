@@ -9079,7 +9079,7 @@ handleCopy(); // function random() {
 //      return array;
 //  }*/
 // //console.log(random(shuffle(makeid(18, true, true, true).split("")).join("")))
-},{"clipboard":"node_modules/clipboard/dist/clipboard.js","bootstrap/dist/js/bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"clipboard":"node_modules/clipboard/dist/clipboard.js","bootstrap/dist/js/bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js"}],"../../.nvm/versions/node/v12.16.3/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -9107,7 +9107,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33775" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34045" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -9283,5 +9283,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../.nvm/versions/node/v12.16.3/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/password-generator.e31bb0bc.js.map
